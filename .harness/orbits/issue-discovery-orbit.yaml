@@ -1,0 +1,68 @@
+package:
+    type: orbit
+    name: issue-discovery-orbit
+description: issue-discovery-orbit orbit
+meta:
+    file: .harness/orbits/issue-discovery-orbit.yaml
+    agents_template: |
+        # AGENTS.md - Issue Discovery Orbit
+
+        你在 Issue Discovery Orbit 中工作。这个 orbit 用于把 PRD synthesis 和 issue slicing 转成 issue tracker 中的可追踪工作。
+
+        ## 必须遵守
+
+        1. 执行本 orbit 的任何 skill 前，先读 `docs/issue-discovery-orbit/discovery-rules.md`。
+        2. 发布 PRD 或 issues 时按目标仓库 Repository Publishing Rules；规则缺失或冲突时，只输出 candidates。
+    humans_template: |
+        # HUMANS.md - Issue Discovery Orbit
+
+        这个 orbit 给想把想法、PRD 或计划整理成 issue tracker 工作项的人使用。
+
+        可用 skill：
+
+        - `to-prd`
+        - `to-issues`
+
+        发布前确认目标仓库的 Repository Publishing Rules：issue tracker、模板、labels、状态入口和权限。
+        规则明确时可以发布；规则缺失或冲突时，只生成 candidates 供确认。
+    include_in_projection: true
+    include_in_write: true
+    include_in_export: true
+    include_description_in_orchestration: true
+capabilities:
+    commands:
+        paths:
+            include:
+                - commands/issue-discovery-orbit/**/*.md
+    skills:
+        local:
+            paths:
+                include:
+                    - skills/issue-discovery-orbit/*
+content:
+    - name: issue-discovery-rules
+      role: rule
+      paths:
+        include:
+            - docs/issue-discovery-orbit/**
+behavior:
+    scope:
+        projection_roles:
+            - meta
+            - subject
+            - rule
+            - process
+        write_roles:
+            - meta
+            - rule
+        export_roles:
+            - meta
+            - rule
+        orchestration_roles:
+            - meta
+            - rule
+            - process
+    orchestration:
+        include_orbit_description: true
+        materialize_agents_from_meta: true
+
