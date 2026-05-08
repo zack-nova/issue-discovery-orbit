@@ -5,9 +5,7 @@ description: Break a plan, spec, or PRD into independently-grabbable issues and 
 
 # To Issues
 
-The process below is the `to-issues` workflow. Issue Discovery Orbit only adds the publishing rules in `docs/issue-discovery-orbit/discovery-rules.md`.
-
-Before running, read `docs/issue-discovery-orbit/discovery-rules.md`.
+This is the `to-issues` workflow. Before running it, read the repository's issue discovery rules, for example `docs/issue-discovery-orbit/discovery-rules.md` when present.
 
 Break a plan into independently-grabbable issues using vertical slices (tracer bullets).
 
