@@ -21,7 +21,7 @@ A deep module is one which encapsulates a lot of functionality in a simple, test
 
 Check with the user that these modules match their expectations. Check with the user which modules they want tests written for.
 
-3. Write the PRD using the template below, then publish it to the issue tracker if repository publishing rules are clear. Apply the repository's entry label or state so it enters the normal triage flow.
+3. Write the PRD using the template below, then publish it to the issue tracker if repository publishing rules are clear. Apply the repository's state that best matches the next needed step.
 
 If publishing rules are missing or conflicting, do not publish. Present the PRD as a candidate and list the missing or conflicting rules.
 
