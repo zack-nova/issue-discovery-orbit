@@ -5,9 +5,7 @@ description: Turn the current conversation context into a PRD and publish it to 
 
 # To PRD
 
-The process below is the `to-prd` workflow. Issue Discovery Orbit only adds the publishing rules in `docs/issue-discovery-orbit/discovery-rules.md`.
-
-Before running, read `docs/issue-discovery-orbit/discovery-rules.md`.
+This is the `to-prd` workflow. Before running it, read the repository's issue discovery rules, for example `docs/issue-discovery-orbit/discovery-rules.md` when present.
 
 This skill takes the current conversation context and codebase understanding and produces a PRD. Do NOT interview the user - just synthesize what you already know.
 
